@@ -25,8 +25,10 @@ $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "rvm/capistrano"
  
 # REPLACE this below with your ruby version/gemset version:  YOUR_RUBY_VERSION@YOUR_GEM_SET
-set :rvm_ruby_string, 'ruby-1.9.2-p318@example_gemset'
- 
+set :rvm_ruby_string, 'ruby-1.9.2-p318'
+set :rvm_type, :user
+
+default_run_options[:pty] = true
 set :use_sudo, false
 set :stages, %w(production staging)
 set :default_stage, "staging"
@@ -40,6 +42,7 @@ set :deploy_via, :remote_cache
  
 # REPLACE the below with your deploy server credentials/server domain name (or ip)
 set :user, 'daf'
+set :port, 3456
 server "changeons.org", :app, :web, :db, :primary => true
  
 after "deploy:update_code",
