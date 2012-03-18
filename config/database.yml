@@ -29,7 +29,7 @@ staging:
     pool: 5
     username: changeons_user
     password: dag_i_daf*db
-    socket: /tmp/mysql.sock
+    socket: /var/run/mysqld/mysqld.sock
     
     
 production:
@@ -44,4 +44,4 @@ production:
   pool: 5
   username: changeons_user
   password: dag_i_daf*db
-  socket: /tmp/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
