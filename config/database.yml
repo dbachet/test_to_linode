@@ -40,7 +40,7 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: changeons_staging
+  database: changeons_production
   pool: 5
   username: changeons_user
   password: dag_i_daf*db
